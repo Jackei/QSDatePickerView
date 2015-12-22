@@ -250,7 +250,8 @@ typedef NS_ENUM(NSInteger, DateFormatterType) {
     {
         if (row == 0)
         {
-            [self getNormalDate];
+            NSInteger i = [_pickerView selectedRowInComponent:0];
+            if (i == 0) [self getNormalDate];
 //            [pickerView selectRow:0 inComponent:2 animated:YES];
         }
         else
